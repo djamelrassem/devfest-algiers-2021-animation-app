@@ -20,7 +20,19 @@ class AnimationScreen extends StatelessWidget {
           ),
         ),
         child: Center(
-          child: CardsSlider(),
+          child: SizedBox(
+            height: MediaQuery.of(context).size.height / 3,
+            width: MediaQuery.of(context).size.width,
+            child: CardsSlider(
+              children: [
+                Container(
+                  color: Colors.red,
+                  height: 120,
+                  width: 120,
+                )
+              ],
+            ),
+          ),
         ),
       ),
     );

@@ -1,7 +1,11 @@
 import 'package:flutter/material.dart';
 
 class CardWidget extends StatefulWidget {
-  const CardWidget({Key? key}) : super(key: key);
+  final Widget child;
+  const CardWidget({
+    Key? key,
+    required this.child,
+  }) : super(key: key);
 
   @override
   _CardWidgetState createState() => _CardWidgetState();
@@ -10,6 +14,11 @@ class CardWidget extends StatefulWidget {
 class _CardWidgetState extends State<CardWidget> {
   @override
   Widget build(BuildContext context) {
-    return Container();
+    return GestureDetector(
+      child: Align(
+        alignment: Alignment.center,
+        child: widget.child,
+      ),
+    );
   }
 }
