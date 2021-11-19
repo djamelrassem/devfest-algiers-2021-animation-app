@@ -1,3 +1,4 @@
+import 'package:devfest_anim/screen/animation_screen.dart';
 import 'package:flutter/material.dart';
 
 void main(List<String> args) {
@@ -9,6 +10,9 @@ class DevFestApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp();
+    return MaterialApp(
+      debugShowCheckedModeBanner: false,
+      home: AnimationScreen(),
+    );
   }
 }
