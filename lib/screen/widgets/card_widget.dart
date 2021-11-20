@@ -2,9 +2,12 @@ import 'package:flutter/material.dart';
 
 class CardWidget extends StatefulWidget {
   final Widget child;
+  final double width, height;
   const CardWidget({
     Key? key,
     required this.child,
+    required this.width,
+    required this.height,
   }) : super(key: key);
 
   @override
